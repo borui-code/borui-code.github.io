@@ -5,8 +5,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全班網址名單</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
   body { font-family: "Noto Sans TC", "Segoe UI", sans-serif; background: linear-gradient(135deg, #e5f1ff, #f7faff); color: #1e293b; display: flex; justify-content: center; align-items: flex-start; padding: 50px 0; }
   .container { background: #fff; border-radius: 16px; box-shadow:0 0 15px rgba(59,130,246,0.15),0 0 25px rgba(96,165,250,0.1); border: 1px solid rgba(147,197,253,0.3); padding: 40px; width: 95%; max-width: 1100px; transition: box-shadow 0.3s ease; }
@@ -63,33 +61,21 @@
   }
 
   .table-container {
-    overflow-x: auto;
+    width: 100%;
+    overflow-x: auto; /* 可橫向滑動 */
+    -webkit-overflow-scrolling: touch; /* iOS 滑動順暢 */
   }
 
   table {
-    width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
-    word-wrap: break-word;
+    width: 100%;
+    min-width: 800px; /* 保持電腦版大小，手機不會壓縮 */
+    white-space: nowrap; /* 不自動換行 */
   }
 
-  td, th {
-    padding: 8px;
+  th, td {
+    padding: 8px 12px;
     text-align: left;
-    word-break: break-all;
-  }
-
-  @media (max-width: 600px) {
-    .home-btn {
-      font-size: 12px;
-      padding: 6px 10px;
-      top: 8px;
-      right: 8px;
-    }
-  }
-
-  td a {
-    white-space: nowrap; /* 不換行 */
   }
 </style>
 
@@ -100,7 +86,7 @@
     <input type="text" id="searchInput" placeholder="🔍 搜尋學號或姓名">
   </div>
 
-  <div class="table-container">
+<div class="table-container">
   <table id="studentTable">
     <thead>
       <tr>
@@ -116,28 +102,28 @@
         <td>1</td>
         <td>C114110101</td>
         <td>郭柏銳</td>
-        <td><a href="https://www2.nkust.edu.tw/~c114110101/">前往網站</a></td>
+        <td><a href="https://www2.nkust.edu.tw/~c114110101/">https://www2.nkust.edu.tw/~c114110101</a></td>
         <td class="last-seen" data-id="C114110101">-</td>
       </tr>
       <tr>
         <td>2</td>
         <td>C114110102</td>
         <td>郭畇鋒</td>
-        <td><a href="https://www2.nkust.edu.tw/~c114110102/">前往網站</a></td>
+        <td><a href="https://www2.nkust.edu.tw/~c114110102/">https://www2.nkust.edu.tw/~c114110102</a></td>
         <td class="last-seen" data-id="C114110102">-</td>
       </tr>
       <tr>
         <td>3</td>
         <td>C114110103</td>
         <td>吳品頤</td>
-        <td><a href="https://www2.nkust.edu.tw/~c114110103/">前往網站</a></td>
+        <td><a href="https://www2.nkust.edu.tw/~c114110103/">https://www2.nkust.edu.tw/~c114110103</a></td>
         <td class="last-seen" data-id="C114110103">-</td>
       </tr>
       <tr>
         <td>4</td>
         <td>C114110104</td>
         <td>朱柏威</td>
-        <td><a href="https://www2.nkust.edu.tw/~c114110104/">前往網站</a></td>
+        <td><a href="https://www2.nkust.edu.tw/~c114110104/">https://www2.nkust.edu.tw/~c114110104</a></td>
         <td class="last-seen" data-id="C114110104">-</td>
       </tr>
       <tr>
